@@ -1,13 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `WMK Development Test`,
+    description: `Flex your development skills and show you can be a part of the WMK Team.`,
+    author: `@WatermarkAgency`,
+    siteUrl: `https://wmkagency.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `irufptezp4yj`,
+        accessToken: `8UxPfBr6Oijem3M1d19NChOLR-mL0xXnTsY0aY-3n98`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
