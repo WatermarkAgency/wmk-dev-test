@@ -30,7 +30,7 @@
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._ 
     
-    *Extra bonus points if you read this and want to do something else after finishing the second challenge. Play around with GraphQL queries to target allConentfulTopics nodes. Then, use your card component to to render titles and subheads for the bottom portion of the card, ang use GatsbyImage to render the mainImage.*
+   **Extra bonus points if you read this and want to do something else after finishing the second challenge. Play around with GraphQL queries to target allConentfulTopics nodes. Then use your card component to render titles and subheads for the bottom portion of the card, and use GatsbyImage to render the mainImage.**
 
     Open the `wmk-dev-test` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
