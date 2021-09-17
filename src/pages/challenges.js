@@ -7,7 +7,9 @@ import Challenge2 from "../components/solutions/Challenge2";
 
 const Challenge1 = () => {
   /**
-   * State
+   * CHALLENGE 1
+   * Create a simple NewsItem class by editing the file
+   * in the NewsItem import above.
    */
   const [newsData, setNewsData] = useState(null);
   const url = "https://calc.dipra.org/feed";
@@ -25,6 +27,7 @@ const Challenge1 = () => {
   });
   console.log(edges);
   /**
+   * CHALLENGE 2
    * Use the NewsItem class you created to structure data.
    * Save that structured data to the variable below,
    * creating an array of each NewsItem instance pulled via API
