@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Card, Badge } from "react-bootstrap";
+import { Badge, Card, Col, Container, Row } from "react-bootstrap";
+import { colors } from "../../vars/colors"
 
 /**
  *
@@ -18,24 +19,35 @@ import { Card, Badge } from "react-bootstrap";
  //iterate over news array of NewsItem instances and create cards
  //display all cards
 const Challenge2 = ({ news }) => {
+  console.log(colors, "colors")
   const cards = news.map(newsItem => {
     const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
     return (
-      <Card key={newsId} style={{ width: '25vw', height: '40vw' }}>
-        <Card.Img src={imageUrl} />
-        <Card.ImgOverlay>
-          <Badge>{date}</Badge>
-        </Card.ImgOverlay>
-        <Card.Body>
-          <Card.Text>{outletName}</Card.Text>
-          <Card.Title>{headline}</Card.Title>
-          <Card.Text>{text}</Card.Text>
-        </Card.Body>
-      </Card>
+      <Col key={newsId}>
+        <Card>
+          <Card.Img src={imageUrl} />
+          <Card.ImgOverlay>
+            <Badge style={{ color: `${colors.black.hex}` }}>
+              {date}
+            </Badge>
+          </Card.ImgOverlay>
+          <Card.Body>
+            <Card.Text>{outletName}</Card.Text>
+            <Card.Title>{headline}</Card.Title>
+            <Card.Text>{text}</Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
     )
   })
 
-  return <section>{cards}</section>;
+  return (
+    <Container>
+      <Row xs={1} md={2} lg={4}>
+        {cards}
+      </Row>
+    </Container>
+  )
 };
 
 export default Challenge2;
