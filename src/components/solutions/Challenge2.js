@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Card, Badge } from "react-bootstrap";
 
 /**
  *
@@ -20,11 +21,17 @@ const Challenge2 = ({ news }) => {
   const cards = news.map(newsItem => {
     const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
     return (
-      <article key={newsId}>
-        <p>{outletName}</p>
-        <h3>{headline}</h3>
-        <p>{text}</p>
-      </article>
+      <Card key={newsId} style={{ width: '25vw', height: '40vw' }}>
+        <Card.Img src={imageUrl} />
+        <Card.ImgOverlay>
+          <Badge>{date}</Badge>
+        </Card.ImgOverlay>
+        <Card.Body>
+          <Card.Text>{outletName}</Card.Text>
+          <Card.Title>{headline}</Card.Title>
+          <Card.Text>{text}</Card.Text>
+        </Card.Body>
+      </Card>
     )
   })
 
