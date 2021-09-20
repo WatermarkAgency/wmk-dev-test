@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Badge, Card, Col, Container, Row } from "react-bootstrap";
-import { colors } from "../../vars/colors"
+import '../styles.css'
 
 /**
  *
@@ -19,19 +19,21 @@ import { colors } from "../../vars/colors"
  //iterate over news array of NewsItem instances and create cards
  //display all cards
 const Challenge2 = ({ news }) => {
-  console.log(colors, "colors")
   const cards = news.map(newsItem => {
     const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
     return (
       <Col key={newsId}>
-        <Card>
-          <Card.Img src={imageUrl} />
-          <Card.ImgOverlay>
-            <Badge style={{ color: `${colors.black.hex}` }}>
+        <Card className='card'>
+          <Card.Img
+            src={imageUrl}
+            className='card-image'
+          />
+          <Card.ImgOverlay className='overlay'>
+            <Badge className='badge'>
               {date}
             </Badge>
           </Card.ImgOverlay>
-          <Card.Body>
+          <Card.Body className='card-body'>
             <Card.Text>{outletName}</Card.Text>
             <Card.Title>{headline}</Card.Title>
             <Card.Text>{text}</Card.Text>

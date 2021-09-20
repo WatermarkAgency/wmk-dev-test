@@ -1,0 +1,23 @@
+.card {
+  border-radius: 0px;
+}
+
+.card-image {
+  border-radius: 0px;
+  box-shadow: 0px 0px 30px 30px rgba(0,0,0,0.9) inset;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.badge {
+  color: black;
+  border-radius: 0px;
+}
+
+.card-body {
+
+}
