@@ -34,9 +34,9 @@ const Challenge2 = ({ news }) => {
             </Badge>
           </Card.ImgOverlay>
           <Card.Body className='card-body'>
-            <Card.Text>{outletName}</Card.Text>
-            <Card.Title>{headline}</Card.Title>
-            <Card.Text>{text}</Card.Text>
+            <Card.Text className='card-text'>{outletName}</Card.Text>
+            <Card.Title className='card-title'>{headline}</Card.Title>
+            <Card.Text className='card-text'>{text}</Card.Text>
           </Card.Body>
         </Card>
       </Col>
