@@ -26,7 +26,6 @@ const Challenge2 = ({ news }) => {
 
   const cards = news.map(newsItem => {
     const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
-    console.log(imageUrl, "imageurl")
     return (
       <Col key={newsId}>
         <Card className='card'>
@@ -44,6 +43,10 @@ const Challenge2 = ({ news }) => {
           <Card.Body className='card-body'>
             <Card.Text className='card-text'>{outletName}</Card.Text>
             <Card.Title className='card-title'>{headline}</Card.Title>
+            <Card.Img
+              src='https://see.fontimg.com/api/renderfont4/AjYx/eyJyIjoiZnMiLCJoIjoxNzEsInciOjI2MywiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/4qa1/preview.png'
+              className='circle-horizontal-bar'
+            />
             <Card.Text className='card-text'>{text}</Card.Text>
           </Card.Body>
         </Card>
