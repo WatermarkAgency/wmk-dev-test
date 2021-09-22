@@ -7,7 +7,6 @@ export class NewsItem {
   constructor(node){
     this.headline = node.News_Headline
     this.imageUrl = node.News_Article_Image_URL
-    // this.date = node.News_Date
     this.date = this.formatDate(node.News_Date)
     this.attachmentUrl = node.News_Attachment_Name
     this.newsId = node.News_ID
@@ -24,6 +23,9 @@ export class NewsItem {
        * const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
        */
   }
+  //must attribute creator for default image
+  //Backgrounds Designed By 30000010267 From <a href="https://lovepik.com/image-401732168/line-color-block-background.html">LovePik.com</a>
+
   formatDate(date) {
     const dateObject = new Date(date)
     const formattedDate = dateObject.toLocaleDateString("en-US", { month: 'short', year: 'numeric'} )

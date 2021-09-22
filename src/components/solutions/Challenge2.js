@@ -19,13 +19,21 @@ import '../styles.css'
  //iterate over news array of NewsItem instances and create cards
  //display all cards
 const Challenge2 = ({ news }) => {
+  const addDefaultSrc = (ev) => {
+    ev.target.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdGZuRrRUHt80K1sKtAz1GB_BypEfyVr7sQ&usqp=CAU'
+
+  }
+
   const cards = news.map(newsItem => {
     const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
+    console.log(imageUrl, "imageurl")
     return (
       <Col key={newsId}>
         <Card className='card'>
           <Card.Img
             src={imageUrl}
+            alt='News image'
+            onError={addDefaultSrc}
             className='card-image'
           />
           <Card.ImgOverlay className='overlay'>
