@@ -25,14 +25,15 @@ const Challenge1 = () => {
       node: e
     };
   });
-  console.log(edges);
   /**
    * CHALLENGE 2
    * Use the NewsItem class you created to structure data.
    * Save that structured data to the variable below,
    * creating an array of each NewsItem instance pulled via API
    */
-  const news = "replace this string";
+  const news = edges.map((edge) => {
+    return new NewsItem(edge.node)
+  })
   return (
     <Container>
       <Row className="flex-column">
