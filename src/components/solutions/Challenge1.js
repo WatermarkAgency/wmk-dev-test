@@ -1,7 +1,6 @@
 /**
  * Code your solution here
  */
-import * as React from "react";
 
 export class NewsItem {
     constructor(node){

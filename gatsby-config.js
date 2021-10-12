@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: ".env"
+});
+
 module.exports = {
   siteMetadata: {
     title: `WMK Development Test`,
@@ -11,8 +15,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `irufptezp4yj`,
-        accessToken: `8UxPfBr6Oijem3M1d19NChOLR-mL0xXnTsY0aY-3n98`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
